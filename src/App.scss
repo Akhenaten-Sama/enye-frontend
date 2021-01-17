@@ -1,0 +1,17 @@
+$my-brand-color:white;
+
+$primary-color: $my-brand-color;
+@import 'loaders.css/src/animations/ball-scale-multiple.scss';
+
+
+
+.loader-hidden {
+  display: none;
+}
+.loader-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:50vh;
+  
+}

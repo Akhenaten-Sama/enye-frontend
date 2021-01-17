@@ -1,0 +1,91 @@
+$c_0: white;
+$c_1: #353540;
+
+// Basic reset
+
+
+
+
+
+
+
+.profilecard {
+  position: relative;
+  z-index: 1;
+  width: 23vw;
+  height: 25rem;
+  padding-bottom: 150px;
+  perspective: 1000px;
+
+  @media screen  and (max-width:760px){
+    width:50vw;
+  margin-right: 1rem;
+  
+    
+  }
+
+  .content{
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+      align-items: center;
+      .span{
+          overflow: hidden;
+          width:80%;
+          height: 5%;
+          display:flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-size:0.9rem;
+          margin-bottom: 1rem;
+          .first{
+              width:max-content;
+          }
+          .second{
+              width:max-content;
+          }
+      }
+  }
+  
+    // Gloss 
+    
+   
+  
+  
+  &:hover &__cover {
+    transform: rotateX(7deg) translateY(-6px);
+
+    &::after {
+      transform: translateY(0%);
+    }
+    
+  }
+  
+  // Shadows
+  
+  &::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    border-radius: 8px;
+    height: 90%;
+    background: rgba($c_0, 0.9);
+    box-shadow: 0 6px 12px 12px rgba($c_0, 0.1);
+    will-change: opacity;
+    transform-origin: top center;
+    transform: skewX(.001deg);
+    transition: transform .35s ease-in-out, opacity .5s ease-in-out;
+  }
+  
+  &:hover::before {
+    opacity: 0.6;
+    transform: rotateX(7deg) translateY(-6px) scale(1.05);
+  }
+  
+  
+}
