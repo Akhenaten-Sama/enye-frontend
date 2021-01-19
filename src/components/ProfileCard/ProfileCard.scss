@@ -13,13 +13,14 @@ $c_1: #353540;
   position: relative;
   z-index: 1;
   width: 23vw;
-  height: 25rem;
+  height: 18rem;
   padding-bottom: 150px;
   perspective: 1000px;
 
   @media screen  and (max-width:760px){
     width:50vw;
   margin-right: 1rem;
+  font-size: 0.7rem;
   
     
   }

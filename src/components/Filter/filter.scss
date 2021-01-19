@@ -5,6 +5,12 @@
     width: 80%;
     margin:0 auto;
   
+    @media screen  and (max-width:760px){
+      display:flex;
+      flex-direction: column;
+      height:30vh;
+      overflow: hidden; 
+      }
     
 
 }
@@ -17,18 +23,31 @@
     min-width: 20vw;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
     position: relative;
-    line-height: 30px;
+    line-height: 10px;
+
+    select{
+
+        @media screen  and (max-width:760px){
+            margin-top:0.5rem;
+            }
+    }
     
 }
 
 label{
     color:white;
+    @media screen  and (max-width:760px){
+       font-size: 12px;
+        }
+
 }
 
 input{
     line-height: 10px;  
-    height: 2rem;
+    height: 1.3rem;
+    @media screen  and (max-width:760px){
+        margin-top:0.5rem;
+        }
 
 }

@@ -3,13 +3,13 @@ import './ProfileCard.scss'
 
 
 export default function ProfileCard({profile}) {
-    const {FirstName, LastName, Email, UserName,Gender,LastLogin, CreditCardType,Longitude,Latitude,PhoneNumber, PaymentMethod} = profile
+    const {FirstName, LastName, Email, color, UserName,Gender,LastLogin, CreditCardType,Longitude,Latitude,PhoneNumber, PaymentMethod} = profile
 
     
     
   const Googlemap = `http://maps.google.com/maps?q=${Latitude},${Longitude}`
     return (
-        <div className='profilecard'>
+        <div className={'profilecard'}>
             <div className='profilecard__cover'></div>
            <div className='content'>
 

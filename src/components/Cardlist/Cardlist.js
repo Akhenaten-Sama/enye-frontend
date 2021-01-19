@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import ProfileCard from '../ProfileCard/ProfileCard';
 import ReactPaginate from 'react-paginate';
 import './Cardlist.scss';
@@ -6,7 +6,13 @@ import './Cardlist.scss';
 export default function Cardlist({ profiles, criteria, filterWord }) {
 	const [ currentPage, setCurrentPage ] = useState(0);
 	const PER_PAGE = 20;
+	function generateRandomColor(){
+    var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+    return randomColor;
+    //random color will be freshly served
+}
 	let filteredProfiles;
+	 profiles.map(profile=> profile.color= generateRandomColor())
 	const offset = currentPage * PER_PAGE;
 	filterWord
 		? (filteredProfiles = profiles.filter((profile) => {
@@ -23,6 +29,7 @@ export default function Cardlist({ profiles, criteria, filterWord }) {
 	}
 	return (
 		<div className='cardlist'>
+
 			<ReactPaginate
 				previousLabel={'← Previous'}
 				nextLabel={'Next →'}
